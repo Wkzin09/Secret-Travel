@@ -115,47 +115,6 @@
             align-items: center;
             justify-content: center;
         }
-
-        /* Grid de Cards */
-        .destinations-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 24px;
-            padding: 0 5% 50px;
-        }
-
-        .card {
-            cursor: pointer;
-        }
-
-        .card img {
-            width: 100%;
-            aspect-ratio: 1/1;
-            object-fit: cover;
-            border-radius: 12px;
-            margin-bottom: 12px;
-            transition: 0.3s;
-        }
-
-        .card:hover img {
-            filter: brightness(0.9);
-        }
-
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            font-weight: 600;
-        }
-
-        .card-desc {
-            color: #717171;
-            font-size: 14px;
-        }
-
-        .card-price {
-            margin-top: 6px;
-            font-size: 15px;
-        }
     </style>
 </head>
 
@@ -191,38 +150,6 @@
             <button class="btn-search">🔍</button>
         </div>
     </div>
-
-    <section class="destinations-grid">
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=400" alt="Paris">
-            <div class="card-header">
-                <span>Paris, França</span>
-                <span>★ 4.9</span>
-            </div>
-            <p class="card-desc">Vista para a Torre Eiffel</p>
-            <p class="card-price"><b>R$ 850</b> / noite</p>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=400" alt="Maldivas">
-            <div class="card-header">
-                <span>Maldivas</span>
-                <span>★ 5.0</span>
-            </div>
-            <p class="card-desc">Bangalô sobre as águas</p>
-            <p class="card-price"><b>R$ 3.200</b> / noite</p>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1580674239581-3fbc1917a147?q=80&w=400" alt="Toscana">
-            <div class="card-header">
-                <span>Toscana, Itália</span>
-                <span>★ 4.8</span>
-            </div>
-            <p class="card-desc">Villa rústica histórica</p>
-            <p class="card-price"><b>R$ 620</b> / noite</p>
-        </div>
-    </section>
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {

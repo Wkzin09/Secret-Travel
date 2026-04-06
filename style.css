@@ -138,8 +138,6 @@ body {
     }
 }
 
-/* Adicione ao final do arquivo */
-
 #forgotForm {
     display: none;
     flex-direction: column;
@@ -150,7 +148,6 @@ body {
     animation: slideIn 0.4s ease-out;
 }
 
-/* Ajuste sutil para os links de alternância */
 .toggle-text {
     margin-top: 15px;
     font-size: 14px;
