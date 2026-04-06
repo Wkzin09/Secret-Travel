@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecretTravel | Explore o Mundo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Ajustes para o estilo Airbnb */
+        body {
+            overflow-y: auto;
+            background: #ffffff;
+            color: #222;
+            height: auto;
+            display: block;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            border-bottom: 1px solid #ebebeb;
+            position: sticky;
+            top: 0;
+            background: #fff;
+            z-index: 1000;
+        }
+
+        .nav-logo {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid #ddd;
+            padding: 8px 16px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .user-profile:hover {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+        }
+
+        .welcome-section {
+            padding: 40px 5% 10px;
+        }
+
+        .welcome-section h2 {
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        /* Barra de Busca Estilo Airbnb */
+        .search-wrapper {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0 40px 0;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 40px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+            padding: 8px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .search-input-group {
+            flex: 1;
+            padding: 5px 20px;
+            border-right: 1px solid #ddd;
+        }
+
+        .search-input-group:last-of-type {
+            border-right: none;
+        }
+
+        .search-input-group label {
+            display: block;
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+        .search-input-group input {
+            border: none;
+            outline: none;
+            width: 100%;
+            font-size: 14px;
+            color: #717171;
+        }
+
+        .btn-search {
+            background: var(--primary);
+            color: white;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Grid de Cards */
+        .destinations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 24px;
+            padding: 0 5% 50px;
+        }
+
+        .card {
+            cursor: pointer;
+        }
+
+        .card img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            transition: 0.3s;
+        }
+
+        .card:hover img {
+            filter: brightness(0.9);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+        }
+
+        .card-desc {
+            color: #717171;
+            font-size: 14px;
+        }
+
+        .card-price {
+            margin-top: 6px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="nav-logo">Secret Travel ✈️</a>
+        <div class="user-profile" id="logoutBtn" title="Clique para sair">
+            <span>☰</span>
+            <span id="userNameDisplay">Perfil</span>
+        </div>
+    </nav>
+
+    <div class="welcome-section">
+        <h2>Olá, <span id="welcomeName" style="color: var(--primary);">Viajante</span>!</h2>
+        <p style="color: #717171;">Encontre lugares incríveis para se hospedar.</p>
+    </div>
+
+    <div class="search-wrapper">
+        <div class="search-bar">
+            <div class="search-input-group">
+                <label>Onde</label>
+                <input type="text" placeholder="Explorar destinos">
+            </div>
+            <div class="search-input-group">
+                <label>Check-in</label>
+                <input type="text" placeholder="Datas">
+            </div>
+            <div class="search-input-group">
+                <label>Quem</label>
+                <input type="text" placeholder="Hóspedes">
+            </div>
+            <button class="btn-search">🔍</button>
+        </div>
+    </div>
+
+    <section class="destinations-grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=400" alt="Paris">
+            <div class="card-header">
+                <span>Paris, França</span>
+                <span>★ 4.9</span>
+            </div>
+            <p class="card-desc">Vista para a Torre Eiffel</p>
+            <p class="card-price"><b>R$ 850</b> / noite</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=400" alt="Maldivas">
+            <div class="card-header">
+                <span>Maldivas</span>
+                <span>★ 5.0</span>
+            </div>
+            <p class="card-desc">Bangalô sobre as águas</p>
+            <p class="card-price"><b>R$ 3.200</b> / noite</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1580674239581-3fbc1917a147?q=80&w=400" alt="Toscana">
+            <div class="card-header">
+                <span>Toscana, Itália</span>
+                <span>★ 4.8</span>
+            </div>
+            <p class="card-desc">Villa rústica histórica</p>
+            <p class="card-price"><b>R$ 620</b> / noite</p>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // 1. Verifica se o usuário está logado
+            const nomeUsuario = localStorage.getItem("usuarioLogado");
+
+            if (!nomeUsuario) {
+                // Se não houver nome salvo, manda de volta para o login
+                window.location.href = "index.html";
+            } else {
+                // Se houver, exibe o nome na tela
+                document.getElementById("welcomeName").innerText = nomeUsuario;
+                document.getElementById("userNameDisplay").innerText = nomeUsuario;
+            }
+
+            // 2. Função de Logout (Sair)
+            document.getElementById("logoutBtn").addEventListener("click", () => {
+                if (confirm("Deseja realmente sair?")) {
+                    localStorage.removeItem("usuarioLogado");
+                    window.location.href = "index.html";
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

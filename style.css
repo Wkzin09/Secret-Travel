@@ -1,0 +1,157 @@
+:root {
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --text-main: #1e293b;
+    --bg-gradient: linear-gradient(135deg, #0f172a 0%, #2563eb 100%);
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-gradient);
+    overflow: hidden;
+}
+
+.form-container {
+    background: rgb(31, 79, 183);
+    backdrop-filter: blur(10px);
+    padding: 50px 40px;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    animation: fadeIn 0.6s ease-out;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.plane {
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.logo:hover .plane {
+    transform: translate(10px, -10px) rotate(-10deg);
+}
+
+.form h2,
+.subtitle,
+.toggle-text {
+    color: white;
+}
+
+.subtitle {
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.form {
+    display: none;
+    flex-direction: column;
+}
+
+.form.active {
+    display: flex;
+    animation: slideIn 0.4s ease-out;
+}
+
+.input-group {
+    margin-bottom: 16px;
+}
+
+.form input {
+    font-weight: 900;
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 2px solid #e2e8f0;
+    font-size: 15px;
+    background: #f8fafc;
+}
+
+
+.btn-main {
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: var(--primary);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn-main:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.toggle-text a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Adicione ao final do arquivo */
+
+#forgotForm {
+    display: none;
+    flex-direction: column;
+}
+
+#forgotForm.active {
+    display: flex;
+    animation: slideIn 0.4s ease-out;
+}
+
+/* Ajuste sutil para os links de alternância */
+.toggle-text {
+    margin-top: 15px;
+    font-size: 14px;
+}

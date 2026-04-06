@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecretTravel | Explore o Mundo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-blobs"></div>
+    <div class="container">
+        <div class="form-container">
+            <div class="logo-container">
+                <h1 class="logo">Secret Travel <span class="plane">✈️</span></h1>
+            </div>
+
+            <div class="form-box">
+                <form id="loginForm" class="form active">
+                    <h2>Bem-vindo de volta</h2>
+                    <p class="subtitle">Acesse sua conta para planejar sua viagem.</p>
+                    <div class="input-group">
+                        <input type="email" id="loginEmail" placeholder="E-mail" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="loginPassword" placeholder="Senha" required>
+                    </div>
+                    <button type="submit" class="btn-main">Entrar</button>
+                    <p class="toggle-text"><a href="#" id="showForgot">Esqueci minha senha</a></p>
+                    <p class="toggle-text">Não tem conta? <a href="#" id="showRegister">Criar conta</a></p>
+                </form>
+
+                <form id="forgotForm" class="form">
+                    <h2>Recuperar Senha</h2>
+                    <p id="forgotSubtitle" class="subtitle">Digite seu e-mail para receber o código.</p>
+
+                    <div id="step1">
+                        <div class="input-group">
+                            <input type="email" id="forgotEmail" placeholder="E-mail cadastrado" required>
+                        </div>
+                        <button type="button" id="btnSendCode" class="btn-main">Enviar Código</button>
+                    </div>
+
+                    <div id="step2" style="display: none;">
+                        <div class="input-group">
+                            <input type="text" id="recoveryCode" placeholder="Código de 4 letras" maxlength="4"
+                                required>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" id="newPassword" placeholder="Nova Senha" required>
+                        </div>
+                        <button type="submit" class="btn-main">Alterar Senha</button>
+                    </div>
+
+                    <p class="toggle-text"><a href="#" id="backToLogin">Voltar ao login</a></p>
+                </form>
+
+                <form id="registerForm" class="form">
+                    <h2>Nova Conta</h2>
+                    <p class="subtitle">Comece sua jornada hoje mesmo.</p>
+                    <div class="input-group">
+                        <input type="text" id="regNome" placeholder="Nome completo" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="regEmail" placeholder="E-mail" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="regSenha" placeholder="Senha" required>
+                    </div>
+                    <button type="submit" class="btn-main">Cadastrar</button>
+                    <p class="toggle-text">Já possui conta? <a href="#" id="showLogin">Fazer login</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
